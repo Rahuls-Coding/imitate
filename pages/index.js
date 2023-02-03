@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Meta from "../components/Meta";
 import Navbar from "../components/Navbar";
-import Group from "../components/Group";
+import Group from "../components/parts/Group";
 
 export default function Home() {
   const user = "User";
@@ -11,83 +11,39 @@ export default function Home() {
       <Meta title="Imitate" />
       <Navbar />
       <div>
-        <h1 className="flex flex-col justify-center items-start max-w-2xl sm:mx-auto pb-16 mx-6 mt-4">
+        <h1 className="flex flex-col justify-center items-start max-w-3xl sm:mx-auto pb-16 mx-6 mt-4">
           <div>
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white mt-4">
               {" "}
               Welcome {user}!
             </h1>
           </div>
-          <div className='text-xl mt-12'>
+          <div className='text-xl font-semibold mt-12'>
             Get started with...
           </div>
-          <div className="grid grid-cols-2 gap-x-16 gap-y-8 mt-8">
-            <Group
-              svg={
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  className="w-6 h-6 "
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"
-                  />
+          <div className="mt-6 grid grid-cols-2 gap-8">
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="lightgreen" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z" />
                 </svg>
-              }
-              color="orange"
-              title="Summarize"
-              text2="cool modal"
-              ext='/summarize'
-            />
-            <Group
-              svg={
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
-                  />
-                </svg>
-              }
-              color="green"
-              title="Headline"
-              text2="cool modal"
-              ext='/headline'
-            />
-            <Group
-              svg={
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="w-6 h-6"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V13.5zm0 2.25h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V18zm2.498-6.75h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V13.5zm0 2.25h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V18zm2.504-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zm0 2.25h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V18zm2.498-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zM8.25 6h7.5v2.25h-7.5V6zM12 2.25c-1.892 0-3.758.11-5.593.322C5.307 2.7 4.5 3.65 4.5 4.757V19.5a2.25 2.25 0 002.25 2.25h10.5a2.25 2.25 0 002.25-2.25V4.757c0-1.108-.806-2.057-1.907-2.185A48.507 48.507 0 0012 2.25z"
-                  />
-                </svg>
-              }
-              color="blue"
-              title="Calculate"
-              text2="cool modal"
-              ext='/calculate'
-            />
+              <div className="mt-3">
+                <h3> Introduction Guide </h3>
+                <p className="text-sm pt-2 w-6/8">This guide provides an overview of the key AI models in the app and explains their basic functionality, and helps understand how they can be utilized to enhance their experience. This introduction is the perfect starting point for those new to AI.</p>
+                <p className="text-sm text-sky-500 pt-2 hover:underline cursor-pointer underline-offset-2 w-fit">Read Guide →</p>
+              </div>
+            </div>
+            <div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="orange" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+</svg>
+
+              <div className="mt-3">
+                <h3> API Guide </h3>
+                <p className="text-sm pt-2 w-6/8">This guide offers a comprehensive explanation of the API endpoints available in the app, including details on input parameters, outputs, and usage examples. It serves as a helpful reference for developers looking to integrate the app&#39;s functionality into their own projects.</p>
+                <p className="text-sm text-sky-500 pt-2 hover:underline cursor-pointer underline-offset-2 w-fit">Read Guide →</p>
+              </div>
+            </div>
+
           </div>
         </h1>
       </div>
