@@ -1,5 +1,5 @@
 import React from "react";
-import Link from 'next/link'
+import Link from "next/link";
 
 function Group({ svg, title, color, text2, ext }) {
   const [showModal, setShowModal] = React.useState(false);

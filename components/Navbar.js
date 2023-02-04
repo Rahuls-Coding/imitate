@@ -1,5 +1,5 @@
 import React from "react";
-import Image from 'next/image'
+import Image from "next/image";
 
 function Navbar() {
   return (
@@ -11,9 +11,15 @@ function Navbar() {
         <button className="px-2 py-2 rounded text-gray-500 hover:text-gray-700">
           <a href="/tools">Tools</a>
         </button>
-          <Image width='25' height='25' alt='avatar' className=" rounded-full ml-2 border border-gray-200 p-1" src='/pfp.png'/>
-        </div>
+        <Image
+          width="25"
+          height="25"
+          alt="avatar"
+          className=" rounded-full ml-2 border border-gray-200 p-1"
+          src="/pfp.png"
+        />
       </div>
+    </div>
   );
 }
 
