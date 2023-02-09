@@ -13,7 +13,7 @@ export default function Home() {
       <div>
         <div className="flex flex-col justify-center items-start max-w-3xl sm:mx-auto pb-16 mx-6 mt-4">
           <div>
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white mt-4">
+            <h1 className="text-3xl font-bold text-gray-900  mt-4">
               {" "}
               Welcome {user}!
             </h1>
@@ -56,7 +56,7 @@ export default function Home() {
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="w-6 h-6"
+                class="w-6 h-6 "
               >
                 <path
                   stroke-linecap="round"
@@ -88,7 +88,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="w-1/4 grid justify-items-end">
-              <button className="w-fit font-semibold rounded py-1 px-2 bg-gray-200 flex items-center justify-self-end">
+              <button className="w-fit font-semibold rounded py-1 px-2 bg-gray-200  flex items-center justify-self-end">
                 {" "}
                   <Link className="text-xs" href='/tools'>
                     VIEW TOOLS
